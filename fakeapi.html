@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    background-image: url("frontpic.jpg");
+    padding: 10rem;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    height: 400px;
+    width: 400px;
+    box-shadow: 25px 25px 75px rgba(176, 215, 252, 0.5),
+                10px 10px 70px rgba(176, 215, 252, 0.5),
+                inset 5px 5px 5px rgb(240, 153, 230),
+                inset -5px 5px 5px  rgb(240, 153, 230),
+                inset -5px -5px 5px  rgb(240, 153, 230)
+                ;
+    border: 2px solid rgba(58, 111, 164);;
+    border-radius: 7px;
+    text-align: center;
+    box-shadow: #00cbf9;
+    padding-top: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: -6%;
+}
+
+#authPage {
+    max-width: 400px;
+    margin: 0 auto;
+    
+}
+
+h1, h2 {
+    color: #333;
+}
+
+input {
+    width: 100%; 
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-radius: 6px;
+}
+
+button {
+    width: 100%;
+    padding: 0.5em;
+    background-color: #ff00e6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3bb9f9;
+}
+
+a {
+    text-decoration: none;
+    color: #ff0000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Welcome to Stay Slayed!</h1>
+        <div id="authPage">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username"><br>
+            <input type="password" id="loginPassword" placeholder="Password"><br>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="index.html">Sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            window.location.href = 'product.html';
+        }
+    </script>
+</body>
+</html>

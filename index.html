@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<style>
+   body {
+    background-image: url("signup.jpg");
+    padding: 10rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    height: 400px;
+    width: 400px;
+    box-shadow: 25px 25px 75px rgba(197, 218, 238, 0.5),
+                10px 10px 70px rgba(212, 229, 246, 0.5),
+                inset 5px 5px 5px rgb(152, 194, 236),
+                inset -5px 5px 5px rgba(152, 194, 236),
+                inset -5px -5px 5px rgba(152, 194, 236)
+                ;
+    border: 2px solid rgba(58, 111, 164);;
+    border-radius: 7px;
+    text-align: center;
+    box-shadow: #00cbf9;
+    padding-top: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: -6%;
+}
+
+#signuppage{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+input {
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-radius: 4px;
+}
+
+button {
+    width: 50%;
+    padding: 0.5em;
+    background-color: #00cefc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #e65fbf;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <div id="signupPage">
+            <h2>Register Now</h2>
+            <form>
+                <label for="">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+    
+                <label for="">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+    
+                <span id="passwordError" style="color: red;"></span><br>
+    
+                <button type="button" onclick="checkPassword()">Sign Up</button>
+
+                <p>Already have an account? <a href="fakeapi.html">Login</a></p>
+            </form>
+            
+           
+        </div>
+    </div>
+
+    <script>
+        
+        const passwordInput = document.getElementById('password');
+        const passwordError = document.getElementById('passwordError');
+        function isPasswordValid(password) {
+            const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+            return passwordRegex.test(password);
+        }
+        function checkPassword() {
+            const password = passwordInput.value;
+
+            if (isPasswordValid(password)) {
+               
+                window.location.href = 'product.html';
+            } else {
+                passwordError.textContent = "Password must be at least 8 characters long and contain at least one uppercase letter and one digit.";
+            }
+        }
+    </script>
+    
+</body>
+</html>
